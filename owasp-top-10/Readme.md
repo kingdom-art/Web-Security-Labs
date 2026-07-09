@@ -23,4 +23,17 @@ Each section contains:
 - A09 – Security Logging and Monitoring Failures
 - A10 – Server-Side Request Forgery
 
+  ## 📈 Status Legend
+
+- ⏳ Not Started
+- 📖 Currently Learning
+- ✅ Completed
+- 🔄 Reviewing
+
+---
+
+## 🎯 Goal
+
+Build a practical understanding of each OWASP Top 10 category through hands-on labs, documentation, and continuous practice.
+
 > All demonstrations are performed in authorized training environments.
