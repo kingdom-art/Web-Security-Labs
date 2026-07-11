@@ -33,3 +33,85 @@ This section documents my hands-on learning and practical exploration of XML Ext
 - Applying secure parsing practices to reduce risk
 
 > **Note:** All testing documented here was performed in authorized lab environments intended for security education.
+
+
+
+
+### 📅 11 July 2026 — XInclude Attacks
+
+## Lab: Exploiting XInclude to Retrieve Files
+
+### Overview
+
+This lab demonstrates how XML features such as **XInclude** can become an attack vector when user-controlled input is embedded into XML documents processed by the server.
+
+Unlike a classic XXE attack, this scenario does not require control over the entire XML document or the ability to define a custom DTD.
+
+---
+
+## Platform
+
+- PortSwigger Web Security Academy
+
+## Tools Used
+
+- Burp Suite
+- Firefox
+
+---
+
+## Lab Workflow
+
+### 1. Lab Overview
+
+![Lab Overview](images/xinclude-lab-overview.png)
+
+The application accepts user input that is embedded into an XML document before being processed by the server.
+
+---
+
+### 2. Intercepting the Request
+
+![Burp Request](images/burp-request.png)
+
+Intercepted the request using Burp Suite to identify where XML input could be manipulated.
+
+---
+
+### 3. Exploiting XInclude
+
+![XInclude Result](images/xinclude-file-disclosure.png)
+
+Tested an XInclude payload in the controlled lab environment, demonstrating local file disclosure through XML processing.
+
+---
+
+### 4. Request Analysis
+
+![HTTP History](images/burp-http-history.png)
+
+Reviewed the request flow and application behavior after exploitation.
+
+---
+
+## Key Takeaways
+
+- XInclude expands the XML attack surface.
+- XML processing should be securely configured.
+- User-controlled XML input should never be trusted.
+
+---
+
+#### Screenshots
+
+![Lab Overview](images/xinclude-lab-overview.png)
+
+![Burp Request](images/burp-request.png)
+
+![File Disclosure](images/xinclude-file-disclosure.png)
+
+![HTTP History](images/burp-http-history.png)
+
+## Status
+
+✅ Completed
